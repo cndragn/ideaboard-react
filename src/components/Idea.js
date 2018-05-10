@@ -8,6 +8,7 @@ class Idea extends Component {
     render() {
         return (
             <div className="tile">
+            <span className="deleteButton">x</span>
             <h4 onClick={this.handleClick}>{this.props.idea.title}</h4>
             <p onClick={this.handleClick}>{this.props.idea.body}</p>
             </div>
