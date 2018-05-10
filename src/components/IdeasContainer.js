@@ -12,7 +12,6 @@ class IdeasContainer extends Component {
 
     componentDidMount() {
         axios.get('http://localhost:3001/api/v1/ideas.json').then(response => {
-            console.log(response)
             this.setState({ideas: response.data})
         })
         .catch(error => console.log(error))
@@ -21,6 +20,11 @@ class IdeasContainer extends Component {
     render() {
         return (
             <div>
+                <div>
+                    <button className="newIdeaButton">
+                        New Idea
+                    </button>
+                </div>
                 {this.state.ideas.map((idea) => {
                     return(
                         <Idea idea={idea} key={idea.id} />
