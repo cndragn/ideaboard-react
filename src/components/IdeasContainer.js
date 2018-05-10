@@ -38,6 +38,8 @@ class IdeasContainer extends Component {
         this.setState({ideas: ideas, notification: 'All changes saved'})
     }
 
+    resetNotification = () => {this.setState({notification: ''})}
+
     render() {
         return (
             <div>
@@ -51,7 +53,8 @@ class IdeasContainer extends Component {
                 </div>
                 {this.state.ideas.map((idea) => {
                     if(this.state.editingIdeaId === idea.id) {
-                        return(<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} />)
+                        return(<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} 
+                            resetNotification={this.resetNotification} />)
                     } else {
                         return(<Idea idea={idea} key={idea.id} />)
                     }
