@@ -16,6 +16,13 @@ API on Heroku: https://idea-api.herokuapp.com/api/v1/ideas
     * terminal: `rails db:migrate db:seed`
     * terminal: `rails s -p 3001`
 
+## Sass processor for reactstrap
+* terminal: `gem install sass`
+* In `package.json`'s scripts, add this line: `"sass" : "sass --watch src/styles/scss:src/styles/css"`
+* Create your custom bootstrap theme file `src/styles/scss/custom.scss`
+* Open a new tab in terminal: `yarn run sass`
+* In src/index.js replace `import 'bootstrap/dist/css/bootstrap.css';` with `import './styles/css/custom.css';`
+* At bottom of custom.scss file add `@import "../../../node_modules/bootstrap/scss/bootstrap";`
 ## Deploy to Surge
 * Update api from localhost:3001 to link on heroku
 * terminal: `npm run build`
