@@ -18,15 +18,15 @@ API on Heroku: https://idea-api.herokuapp.com/api/v1/ideas
 
 ## Deploy to Surge
 * Update api from localhost:3001 to link on heroku
-* terminal: `npm run build'
-* terminal: `surge'
+* terminal: `npm run build`
+* terminal: `surge`
 * Log in or create account at prompt
 * Add `build` at end of project path
 * Change project url if desired, ending with surge.sh
 
 ## Update project on Surge
-* terminal: `npm run build'
-* terminal: `surge'
+* terminal: `npm run build`
+* terminal: `surge`
 * Log in at prompt
 * Add `build` at end of project path
 * Change project url to project being updated
