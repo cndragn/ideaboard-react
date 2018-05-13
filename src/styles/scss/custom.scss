@@ -2,9 +2,16 @@
 
 //== Colors
 
-$aqua:    #59b8eb !default;
+$aqua:    #5480e9 !default;
+$lilac: #e2e5f1 !default;
 
 $primary:       $aqua !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $lilac !default;
 
 //== Typography
 
