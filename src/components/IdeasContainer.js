@@ -66,7 +66,7 @@ class IdeasContainer extends Component {
                         {this.state.notification}
                     </span>
                 </div>
-                <Row>
+                <div class="card-columns">
                     {this.state.ideas.map((idea) => {
                         if(this.state.editingIdeaId === idea.id) {
                             return(<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} 
@@ -75,7 +75,7 @@ class IdeasContainer extends Component {
                             return(<Idea idea={idea} key={idea.id} onClick={this.enableEditing} onDelete={this.deleteIdea} />)
                         }
                     })}
-                </Row>
+                </div>
             </div>  
         );
     }

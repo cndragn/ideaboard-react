@@ -32,7 +32,6 @@ class IdeaForm extends Component {
 
     render () {
         return (
-            <Col md="4">
                 <Card>
                     <CardImg />
                     <CardBody>
@@ -46,7 +45,6 @@ class IdeaForm extends Component {
                         </form>
                     </CardBody>
                 </Card>
-            </Col>
         );
     }
 }

@@ -21,7 +21,7 @@
 textarea {
   resize: none;
   width: 100%;
-  height: 150px;
+  height: 100%;
 }
 
 .deleteButton {
@@ -33,7 +33,7 @@ textarea {
   color: red;
 }
 
-.tile:hover .deleteButton {
+.card:hover .deleteButton {
   visibility: visible;
 }
 

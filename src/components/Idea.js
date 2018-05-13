@@ -14,7 +14,7 @@ class Idea extends Component {
 
     render() {
         return (
-            <Col md = "6" lg="4">
+            // <Col md = "6" lg="4">
                 <Card>
                     <CardImg />
                     <CardBody>
@@ -27,7 +27,7 @@ class Idea extends Component {
                         </CardText>
                     </CardBody>
                 </Card>
-            </Col>
+            // </Col>
         )
     }
 }
