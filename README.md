@@ -10,7 +10,8 @@ API on Heroku: https://idea-api.herokuapp.com/api/v1/ideas
 
 ## Run locally
 * Clone ideaboard-react repo and cd into it
-    * terminal: `rails s`
+    * terminal: `yarn`
+    * terminal: `yarn start`
 * Clone ideaboard-api repo and cd into it
     * terminal: `rails db:migrate db:seed`
     * terminal: `rails s -p 3001`
