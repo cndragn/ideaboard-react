@@ -3,6 +3,7 @@ import axios from 'axios'
 import Idea from './Idea'
 import IdeaForm from './IdeaForm'
 import update from 'immutability-helper'
+import { Row, Button } from 'reactstrap';
 
 class IdeasContainer extends Component {
     constructor(props) {
@@ -57,21 +58,24 @@ class IdeasContainer extends Component {
         return (
             <div>
                 <div>
-                    <button className="newIdeaButton" onClick={this.addNewIdea}>
+                {/* <Button color="primary">primary</Button>{' '} */}
+                    <Button color="primary" className="newIdeaButton" onClick={this.addNewIdea}>
                         New Idea
-                    </button>
+                    </Button>
                     <span className="notification">
                         {this.state.notification}
                     </span>
                 </div>
-                {this.state.ideas.map((idea) => {
-                    if(this.state.editingIdeaId === idea.id) {
-                        return(<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} 
-                            resetNotification={this.resetNotification} titleRef={input => this.title = input} />)
-                    } else {
-                        return(<Idea idea={idea} key={idea.id} onClick={this.enableEditing} onDelete={this.deleteIdea} />)
-                    }
-                })}
+                <Row>
+                    {this.state.ideas.map((idea) => {
+                        if(this.state.editingIdeaId === idea.id) {
+                            return(<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} 
+                                resetNotification={this.resetNotification} titleRef={input => this.title = input} />)
+                        } else {
+                            return(<Idea idea={idea} key={idea.id} onClick={this.enableEditing} onDelete={this.deleteIdea} />)
+                        }
+                    })}
+                </Row>
             </div>  
         );
     }

@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { Col, Card, CardImg, CardText, CardBody,
+    CardTitle } from 'reactstrap';
+
 
 class Idea extends Component {
     handleClick = () => {
@@ -11,11 +14,20 @@ class Idea extends Component {
 
     render() {
         return (
-            <div className="tile">
-            <span className="deleteButton" onClick={this.handleDelete} >x</span>
-            <h4 onClick={this.handleClick}>{this.props.idea.title}</h4>
-            <p onClick={this.handleClick}>{this.props.idea.body}</p>
-            </div>
+            <Col md = "6" lg="4">
+                <Card>
+                    <CardImg />
+                    <CardBody>
+                        <span className="deleteButton" onClick={this.handleDelete} >x</span>
+                        <CardTitle>
+                            <h4 onClick={this.handleClick}>{this.props.idea.title}</h4>
+                        </CardTitle>
+                        <CardText>
+                            <p onClick={this.handleClick}>{this.props.idea.body}</p>
+                        </CardText>
+                    </CardBody>
+                </Card>
+            </Col>
         )
     }
 }
