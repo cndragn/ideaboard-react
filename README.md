@@ -2,6 +2,10 @@
 
 Demo: http://ideaboard-react.surge.sh/
 
+API: https://idea-api.herokuapp.com/api/v1/ideas
+
+Back End repo: https://github.com/cndragn/ideaboard-api
+
 ## Description
 
 A place to create a collection of your ideas in one place.
@@ -15,12 +19,6 @@ Click the "New Idea" button to create a new card, then enter a title and descrip
 Ruby on Rails, React, API, Bootstrap, Sass.
 
 Back end API deployed to Heroku, React front end deployed to Surge.sh
-
-Front End - ideaboard-react repo: https://github.com/cndragn/ideaboard-react
-
-Back End - ideaboard-api repo: https://github.com/cndragn/ideaboard-api
-
-API on Heroku: https://idea-api.herokuapp.com/api/v1/ideas
 
 ## Future Plans
 
