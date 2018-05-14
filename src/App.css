@@ -21,8 +21,8 @@
   font-size: 2.8rem;
 }
 
-.App-intro {
-  font-size: large;
+.notification {
+  margin: 0 15px;
 }
 
 .input {
