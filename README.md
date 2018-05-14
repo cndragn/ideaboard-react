@@ -8,7 +8,7 @@ A place to create a collection of your ideas in one place.
 
 Click the "New Idea" button to create a new card, then enter a title and description of your idea.  To edit an idea, click directly on the title or description of the idea you would like to modify and type in the new information.  To delete an idea, hover over or click on a card and click on the red "X"
 
-![Preview version 1](https://raw.githubusercontent.com/cndragn/ideaboard-react/master/img/v2.png) *Version 2*
+![Preview version 2](https://raw.githubusercontent.com/cndragn/ideaboard-react/master/img/version2.png) *Version 2*
 
 ## Technologies Used
 
