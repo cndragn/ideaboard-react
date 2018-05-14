@@ -1,7 +1,24 @@
 .App-header {
   text-align: center;
-  height: 150px;
   padding: 20px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  background-image: url("./images/background.jpg");
+  text-transform: uppercase;
+  color: #0d3248;
+}
+
+.App-header h1, .App-header h2 {
+  font-family: "Playfair Display", Helvetica, Arial, sans-serif;
+
+}
+
+.App-header h1 {
+  font-size: 4.5rem;
+}
+
+.App-header h2 {
+  font-size: 2.8rem;
 }
 
 .App-intro {

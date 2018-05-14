@@ -3,7 +3,7 @@ import axios from 'axios'
 import Idea from './Idea'
 import IdeaForm from './IdeaForm'
 import update from 'immutability-helper'
-import { Row, Button } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 class IdeasContainer extends Component {
     constructor(props) {

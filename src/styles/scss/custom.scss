@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Reem+Kufi');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Reem+Kufi|Playfair+Display');
 
 //== Colors
 
-$aqua:    #5480e9 !default;
-$lilac: #e2e5f1 !default;
+$aqua:    #0da9fd !default;
+$powderbl: #f0f6f7 !default;
 
-$primary:       $aqua !default;
+$primary: $aqua !default;
 
 // Body
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $lilac !default;
+$body-bg: $powderbl !default;
 
 //== Typography
 
