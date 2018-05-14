@@ -1,6 +1,6 @@
 # Ideaboard
 
-View live project: http://ideaboard-react.surge.sh/
+Demo: http://ideaboard-react.surge.sh/
 
 ## Description
 
@@ -67,5 +67,9 @@ API on Heroku: https://idea-api.herokuapp.com/api/v1/ideas
 * Add `build` at end of project path
 * Change project url to project being updated
 
+### Attributions
+Tutorial: [Learnetto: React JS tutorial make an idea board app](https://learnetto.com/tutorials/rails-5-api-and-react-js-tutorial-how-to-make-an-idea-board-app)
+
 ## Previous versions
 ![Preview version 1](https://raw.githubusercontent.com/cndragn/ideaboard-react/master/img/v1.png) *Version 1*
+
