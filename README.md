@@ -1,10 +1,14 @@
 # Ideaboard
 
+View live project: http://ideaboard-react.surge.sh/
+
 ## Description
 
 A place to create a collection of your ideas in one place.
 
 Click the "New Idea" button to create a new card, then enter a title and description of your idea.  To edit an idea, click directly on the title or description of the idea you would like to modify and type in the new information.  To delete an idea, hover over or click on a card and click on the red "X"
+
+![Preview version 1](https://raw.githubusercontent.com/cndragn/ideaboard-react/master/img/v2.png) *Version 2*
 
 ## Technologies Used
 
@@ -15,8 +19,6 @@ Back end API deployed to Heroku, React front end deployed to Surge.sh
 Front End - ideaboard-react repo: https://github.com/cndragn/ideaboard-react
 
 Back End - ideaboard-api repo: https://github.com/cndragn/ideaboard-api
-
-View live project: http://ideaboard-react.surge.sh/
 
 API on Heroku: https://idea-api.herokuapp.com/api/v1/ideas
 
@@ -64,3 +66,6 @@ API on Heroku: https://idea-api.herokuapp.com/api/v1/ideas
 * Log in at prompt
 * Add `build` at end of project path
 * Change project url to project being updated
+
+## Previous versions
+![Preview version 1](https://raw.githubusercontent.com/cndragn/ideaboard-react/master/img/v1.png) *Version 1*
