@@ -9,6 +9,10 @@
 # production
 /build
 
+# Bootstrap / Sass
+/.sass-cache
+/src/styles/css/custom.css.map
+
 # misc
 .DS_Store
 .env.local
