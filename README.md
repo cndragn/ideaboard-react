@@ -12,7 +12,7 @@ A place to create a collection of your ideas in one place.
 
 Click the "New Idea" button to create a new card, then enter a title and description of your idea.  To edit an idea, click directly on the title or description of the idea you would like to modify and type in the new information.  To delete an idea, hover over or click on a card and click on the red "X"
 
-![Preview version 2](https://raw.githubusercontent.com/cndragn/ideaboard-react/master/img/version2.png) *Version 2*
+![Preview version 2](https://raw.githubusercontent.com/cndragn/ideaboard-react/master/img/version2.png) 
 
 ## Technologies Used
 
@@ -35,6 +35,7 @@ Back end API deployed to Heroku, React front end deployed to Surge.sh
 * Clone ideaboard-react repo and cd into it
     * terminal: `yarn`
     * terminal: `yarn start`
+    * Update api links in `IdeaForm.js` and `IdeasContainer.js` from `idea-api.herokuapp.com/api/vi/ideas` to `localhost:3001`
 * Clone ideaboard-api repo and cd into it
     * terminal: `rails db:migrate db:seed`
     * terminal: `rails s -p 3001`
@@ -50,7 +51,7 @@ Back end API deployed to Heroku, React front end deployed to Surge.sh
 
 ## Deploy to Surge
 
-* Update api from localhost:3001 to link on heroku
+* Update api in IdeaForm.js and IdeasContainer.js from localhost:3001
 * terminal: `npm run build`
 * terminal: `surge`
 * Log in or create account at prompt
