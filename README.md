@@ -61,6 +61,7 @@ Back end API deployed to Heroku, React front end deployed to Surge.sh
 ## Update project on Surge
 
 * terminal: `npm run build`
+* Change index.html to 200.html in build folder to correctly run React routes
 * terminal: `surge`
 * Log in at prompt
 * Add `build` at end of project path
