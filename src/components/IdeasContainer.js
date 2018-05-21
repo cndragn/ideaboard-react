@@ -4,7 +4,7 @@ import Idea from './Idea'
 import IdeaForm from './IdeaForm'
 import update from 'immutability-helper'
 import { Button } from 'reactstrap';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class IdeasContainer extends Component {
     constructor(props) {

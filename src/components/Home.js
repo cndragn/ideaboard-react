@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Idea from './Idea'
-import IdeaForm from './IdeaForm'
-import update from 'immutability-helper'
 import { Button } from 'reactstrap';
+import addidea from '../images/add-idea.gif';
+import editidea from '../images/edit-idea.gif';
+import deleteidea from '../images/delete-idea.gif';
+import { Link } from 'react-router-dom';
+
 
 class Home extends Component {
     constructor(props) {
@@ -23,61 +25,40 @@ class Home extends Component {
         .catch(error => console.log(error))
     }
 
-    addNewIdea = () => {
-        axios.post('https://idea-api.herokuapp.com/api/v1/ideas', {idea: {title: '', body: ''}})
-        .then(response => {
-            const ideas = update(this.state.ideas, { $splice: [[0, 0, response.data]]})
-            this.setState({ideas: ideas, editingIdeaId: response.data.id})
-        })
-        .catch(error => console.log(error))
-    }
-
-    updateIdea = (idea) => {
-        const ideaIndex = this.state.ideas.findIndex(x => x.id === idea.id)
-        const ideas = update(this.state.ideas, {[ideaIndex]: {$set: idea}})
-        this.setState({ideas: ideas, notification: 'All changes saved'})
-    }
-
-    resetNotification = () => {this.setState({notification: ''})}
-
-    enableEditing = (id) => {
-        this.setState({editingIdeaId: id}, () => {this.title.focus() })
-    }
-
-    deleteIdea = (id) => {
-        axios.delete(`https://idea-api.herokuapp.com/api/v1/ideas/${id}`)
-        .then(response => {
-            const ideaIndex = this.state.ideas.findIndex(x => x.id === id)
-            const ideas = update(this.state.ideas, { $splice: [[ideaIndex, 1]]})
-            this.setState({ideas: ideas})
-        })
-        .catch(error => console.log(error))
-    }
 
     render() {
         return (
-            <div>
-                <h1>Home</h1>
+            <div> 
+                <div className="title text-center">
+                    <h1>Collect your ideas in one place</h1>
+                    <h2>Create an idea board to quickly create, edit and delete ideas</h2>  
+                    <Button className="btn btn-success"><Link to="/demo">Try The Demo</Link></Button>
+                </div>             
+                <div className="demoIdeas">
+                    <div className="card">
+                        <div className="card-body">
+                            <h1 className="card-title">Add New Ideas</h1>
+                            <p className="card-text">Create a new card by selecting New Idea then entering a title and description.</p>
+                        </div>
+                        <img className="card-img-top" src={addidea} alt="Add Idea Demo"/>
+                    </div>
+                    <div className="card">
+                        <div className="card-body">
+                            <h1 className="card-title">Edit Your Idea</h1>
+                            <p className="card-text">Click directly on the title or description to edit your idea.</p>
+                        </div>
+                        <img className="card-img-top" src={editidea} alt="Edit Idea Demo"/>                        
+                    </div>
+                    <div className="card">
+                        <div className="card-body">
+                            <h1 className="card-title">Delete Your Idea</h1>
+                            <p className="card-text">Delete an idea by hovering over it or clicking the card, then click the red X.</p>
+                        </div>
+                        <img className="card-img-top" src={deleteidea} alt="Delete Idea Demo"/>                        
+                    </div>
+                    <Button className="btn btn-success"><Link to="/demo">Try The Demo</Link></Button>
+                </div>
                 
-                <div>
-                {/* <Button color="primary">primary</Button>{' '} */}
-                    <Button color="primary" className="newIdeaButton" onClick={this.addNewIdea}>
-                        New Idea
-                    </Button>
-                    <span className="notification">
-                        {this.state.notification}
-                    </span>
-                </div>
-                <div class="card-columns">
-                    {this.state.ideas.map((idea) => {
-                        if(this.state.editingIdeaId === idea.id) {
-                            return(<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} 
-                                resetNotification={this.resetNotification} titleRef={input => this.title = input} />)
-                        } else {
-                            return(<Idea idea={idea} key={idea.id} onClick={this.enableEditing} onDelete={this.deleteIdea} />)
-                        }
-                    })}
-                </div>
             </div>  
         );
     }

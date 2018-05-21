@@ -17,10 +17,6 @@ class App extends Component {
         <Container>
           <BrowserRouter>
           <div>
-            <ul className="header">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/demo">Demo</Link></li>
-            </ul>
             <div className="content">
               <Route exact path="/" component={Home}/>
               <Route path="/demo" component={IdeasContainer}/>             
