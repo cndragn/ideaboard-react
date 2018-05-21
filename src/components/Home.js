@@ -57,12 +57,8 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <h1>Demo Preview</h1>
-                <p>
-            Create a new card by selecting New Idea then entering a title and description.<br/>
-            Click directly on the title or description to edit your idea. <br/>
-            Delete an idea by hovering over it or clicking the card, then click the red X.
-          </p>
+                <h1>Home</h1>
+                
                 <div>
                 {/* <Button color="primary">primary</Button>{' '} */}
                     <Button color="primary" className="newIdeaButton" onClick={this.addNewIdea}>
