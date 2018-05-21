@@ -4,9 +4,8 @@ import Idea from './Idea'
 import IdeaForm from './IdeaForm'
 import update from 'immutability-helper'
 import { Button } from 'reactstrap';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
 
-class IdeasContainer extends Component {
+class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -58,20 +57,20 @@ class IdeasContainer extends Component {
     render() {
         return (
             <div>
-                <div class="nav-wrap">
-                    <div>
-                    {/* <Button color="primary">primary</Button>{' '} */}
-                        <Button color="primary" className="newIdeaButton" onClick={this.addNewIdea}>
-                            New Idea
-                        </Button>
-
-                        <span className="notification">
-                            {this.state.notification}
-                        </span>
-                    </div>
-                    <div>
-                        <Link to="/">Return to Home</Link>
-                    </div>
+                <h1>Demo Preview</h1>
+                <p>
+            Create a new card by selecting New Idea then entering a title and description.<br/>
+            Click directly on the title or description to edit your idea. <br/>
+            Delete an idea by hovering over it or clicking the card, then click the red X.
+          </p>
+                <div>
+                {/* <Button color="primary">primary</Button>{' '} */}
+                    <Button color="primary" className="newIdeaButton" onClick={this.addNewIdea}>
+                        New Idea
+                    </Button>
+                    <span className="notification">
+                        {this.state.notification}
+                    </span>
                 </div>
                 <div class="card-columns">
                     {this.state.ideas.map((idea) => {
@@ -88,4 +87,4 @@ class IdeasContainer extends Component {
     }
 }
 
-export default IdeasContainer
+export default Home

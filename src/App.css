@@ -57,3 +57,8 @@ textarea {
 .card {
   margin: 15px 0;
 }
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+}

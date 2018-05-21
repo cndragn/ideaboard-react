@@ -1,7 +1,10 @@
-import React, { Component } from 'react'
-import './App.css'
+import React, { Component } from 'react';
+import './App.css';
 import { Container } from 'reactstrap';
+import Home from './components/Home';
 import IdeasContainer from './components/IdeasContainer'
+
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -12,13 +15,20 @@ class App extends Component {
           <h2>Get Inspired</h2>
         </header>
         <Container>
-          <p>
-            Create a new card by selecting New Idea then entering a title and description.<br/>
-            Click directly on the title or description to edit your idea. <br/>
-            Delete an idea by hovering over it or clicking the card, then click the red X.
-          </p>
-          <IdeasContainer />
+          <BrowserRouter>
+          <div>
+            <ul className="header">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/demo">Demo</Link></li>
+            </ul>
+            <div className="content">
+              <Route exact path="/" component={Home}/>
+              <Route path="/demo" component={IdeasContainer}/>             
+            </div>
+         </div>
+        </BrowserRouter>
         </Container>
+        
       </div>
     );
   }
