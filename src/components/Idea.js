@@ -4,7 +4,7 @@ import { Card, CardImg, CardText, CardBody,
 
 
 class Idea extends Component {
-    handleClick = () => {
+    handleClick = (event) => {
         this.props.onClick(this.props.idea.id)
     }
 
@@ -14,20 +14,18 @@ class Idea extends Component {
 
     render() {
         return (
-            // <Col md = "6" lg="4">
                 <Card>
                     <CardImg />
                     <CardBody>
-                        <span className="deleteButton" onClick={this.handleDelete} >x</span>
                         <CardTitle>
-                            <h4 onClick={this.handleClick}>{this.props.idea.title}</h4>
+                            <span onClick={this.handleClick}>{this.props.idea.title}</span>
                         </CardTitle>
                         <CardText>
-                            <p onClick={this.handleClick}>{this.props.idea.body}</p>
+                            <span onClick={this.handleClick}>{this.props.idea.body}</span>
                         </CardText>
+                        <span className="deleteButton" onClick={this.handleDelete} >x</span>
                     </CardBody>
                 </Card>
-            // </Col>
         )
     }
 }

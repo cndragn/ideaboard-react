@@ -4,7 +4,7 @@ import { Container } from 'reactstrap';
 import Home from './components/Home';
 import IdeasContainer from './components/IdeasContainer'
 
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {

@@ -17,8 +17,29 @@ class IdeaForm extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
 
+    handleSubmit = (e) => {
+        const idea = {title: this.state.title, body: this.state.body}
+        if (e.key === 'Enter') {
+            console.log('do validate');
+            e.preventDefault()
+            e.stopPropagation()
+            this.props.resetNotification()
+            this.setState({[e.target.name]: e.target.value})
+            axios.put(
+                `https://idea-api.herokuapp.com/api/v1/ideas/${this.props.idea.id}`,
+                {idea: idea}
+            )
+            .then(response => {
+                console.log(response)
+                this.props.updateIdea(response.data)
+            })
+        }  
+    }
+
     handleBlur = () => {
         const idea = {title: this.state.title, body: this.state.body}
+        
+        console.log("Yup");
         axios.put(
             `https://idea-api.herokuapp.com/api/v1/ideas/${this.props.idea.id}`,
             {idea: idea}
@@ -37,10 +58,10 @@ class IdeaForm extends Component {
                     <CardBody>
                         <form onBlur={this.handleBlur}>
                         <CardTitle>
-                            <input className="input" type="text" name = "title" placeholder="Enter a Title" value ={this.state.title} onChange={this.handleInput} ref={this.props.titleRef} />
+                            <input className="input" type="text" name = "title" placeholder="Enter a Title" value ={this.state.title} onKeyPress={this.handleSubmit} onChange={this.handleInput} ref={this.props.titleRef} />
                         </CardTitle>
                         <CardText>
-                            <textarea className="input" name="body" placeholder="Describe your idea" value = {this.state.body} onChange={this.handleInput}></textarea>
+                            <textarea className="input" name="body" placeholder="Describe your idea" value = {this.state.body} onKeyPress={this.handleSubmit} onChange={this.handleInput}></textarea>
                         </CardText>
                         </form>
                     </CardBody>

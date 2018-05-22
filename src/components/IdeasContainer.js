@@ -63,7 +63,7 @@ class IdeasContainer extends Component {
                 Click directly on the title or description to edit your idea. <br/>
                 Delete an idea by hovering over it or clicking the card, then click the red X.
                 </p>
-                <div class="nav-wrap">
+                <div className="nav-wrap">
                     <div>
                     {/* <Button color="primary">primary</Button>{' '} */}
                         <Button color="primary" className="newIdeaButton" onClick={this.addNewIdea}>
@@ -78,7 +78,7 @@ class IdeasContainer extends Component {
                         <Link to="/">Return to Home</Link>
                     </div>
                 </div>
-                <div class="card-columns">
+                <div className="card-columns">
                     {this.state.ideas.map((idea) => {
                         if(this.state.editingIdeaId === idea.id) {
                             return(<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} 
