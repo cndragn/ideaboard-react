@@ -58,10 +58,9 @@ class IdeasContainer extends Component {
     render() {
         return (
             <div>
-                <p>
-                Create a new card by selecting New Idea then entering a title and description.<br/>
-                Click directly on the title or description to edit your idea. <br/>
-                Delete an idea by hovering over it or clicking the card, then click the red X.
+                <p class="info">Create a new card by selecting New Idea then entering a title and description.</p>
+                <p class="info">Click directly on the title or description to edit your idea. </p>
+                <p class="info">Delete an idea by hovering over it or clicking the card, then click the red X.
                 </p>
                 <div className="nav-wrap">
                     <div>

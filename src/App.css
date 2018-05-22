@@ -21,6 +21,10 @@
   font-size: 2.8rem;
 }
 
+.info {
+  text-align: center;
+}
+
 .notification {
   margin: 15px 0 0;
   width: 100%;
@@ -110,5 +114,8 @@ textarea {
 @media only screen and (max-width: 1023px) {
   .deleteButton {
     visibility: visible;
+  }
+  .info {
+    text-align: left;
   }
 }
