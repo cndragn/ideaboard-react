@@ -74,7 +74,11 @@ textarea {
 }
 
 .demoIdeas .card {
-  max-width: 500px;
+  border: 3px solid #81dae8;
+}
+
+.demoIdeas .card {
+  max-width: 400px;
 }
 
 .btn a {
@@ -83,4 +87,16 @@ textarea {
 
 .btn-success {
   margin: 25px 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .demoIdeas .card {
+    width: 720px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+  }
+  .demoIdeas .card-img-top {
+    width: 70%;
+  }
 }
