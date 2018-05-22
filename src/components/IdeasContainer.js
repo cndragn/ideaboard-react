@@ -12,7 +12,7 @@ class IdeasContainer extends Component {
         this.state = {
             ideas: [],
             editingIdeaId: null,
-            notification: ''
+            notification: ' '
         }
     }
 
@@ -70,14 +70,15 @@ class IdeasContainer extends Component {
                             New Idea
                         </Button>
 
-                        <span className="notification">
-                            {this.state.notification}
-                        </span>
+                       
                     </div>
                     <div>
                         <Link to="/">Return to Home</Link>
                     </div>
                 </div>
+                <div className="notification">
+                            {this.state.notification}
+                        </div>
                 <div className="card-columns">
                     {this.state.ideas.map((idea) => {
                         if(this.state.editingIdeaId === idea.id) {

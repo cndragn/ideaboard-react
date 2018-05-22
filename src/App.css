@@ -22,7 +22,9 @@
 }
 
 .notification {
-  margin: 0 15px;
+  margin: 15px 0 0;
+  width: 100%;
+  min-height: 24px;
 }
 
 .input {
@@ -94,7 +96,7 @@ textarea {
   margin: 25px 0;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .demoIdeas .card {
     width: 720px;
     max-width: 90%;
@@ -103,5 +105,10 @@ textarea {
   }
   .demoIdeas .card-img-top {
     width: 70%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .deleteButton {
+    visibility: visible;
   }
 }
