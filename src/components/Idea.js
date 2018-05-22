@@ -19,11 +19,12 @@ class Idea extends Component {
                     <CardBody>
                         <CardTitle>
                             <span onClick={this.handleClick}>{this.props.idea.title}</span>
+                            <span className="deleteButton" onClick={this.handleDelete} >X</span>
                         </CardTitle>
                         <CardText>
                             <span onClick={this.handleClick}>{this.props.idea.body}</span>
                         </CardText>
-                        <span className="deleteButton" onClick={this.handleDelete} >x</span>
+                        
                     </CardBody>
                 </Card>
         )
